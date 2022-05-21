@@ -7,27 +7,6 @@ import { images, files } from '../../constants'
 function Navbar() {
     const [toggle, setToggle] = useState(false)
 
-    // Open pdf function
-    // const openPDF = () => {
-    //     const pdfWindow = window.open("lucas_chen_resume");
-    //     const title     = "lucas_chen_resume";
-    //     const URI       = title + ".pdf";
-    //     const html      = `
-    //     <html>
-    //         <head>
-    //         <title>${title}</title>
-    //         </head>
-    //         <body style="margin:0">
-    //         <embed width="100%" height="100%" src=${files.resume} type="application/pdf">
-    //         </body>
-    //     </html>
-    //     `;
-    
-    //     pdfWindow.document.write(html);
-    //     pdfWindow.document.close();
-    //     pdfWindow.history.pushState(null, null, URI);
-    // };
-
   return (
     <nav className="app__navbar">
         <div className='app__navbar-logo'>

@@ -47,7 +47,7 @@ const Footer = () => {
       </div>
       
       {!isSubmitted ?
-      <form className='app__footer-form app__flex' data-netlify="true" method="POST">
+      <form className='app__footer-form app__flex' data-netlify="true" method="POST" name='contact'>
         <div className='app__flex'>
           <input type='text' placeholder='Name' className='p-text' name='name' value={name} onChange={handleChangeInput}/>
         </div>

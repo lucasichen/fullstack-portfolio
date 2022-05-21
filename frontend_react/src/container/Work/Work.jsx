@@ -36,7 +36,7 @@ function Work() {
   }
   return (
     <>
-      <h2 className='head-text'>My Creative <span> Portfolio</span> section</h2>
+      <h2 className='head-text'>My <span> Project</span> section</h2>
       <div className='app__work-filter'>
         {['Fullstack', 'Web App', 'Web Scraper', 'All'].map((item, index) => (
           <div
@@ -103,6 +103,6 @@ function Work() {
 // Wrap with COPYRIGHT and bottom left button links
 export default AppWrap(
   MotionWrap(Work,'app__works'),
-  'work',
+  'projects',
   "app__whitebg" // changes background color of section
   );

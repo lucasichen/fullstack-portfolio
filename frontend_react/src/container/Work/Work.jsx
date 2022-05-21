@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { AiFillEye, AiFillGithub } from 'react-icons/ai'
 import { motion } from 'framer-motion'
 
-import { AppWrap } from '../../wrapper'
+import { AppWrap, MotionWrap } from '../../wrapper'
 import { urlFor, client } from '../../client'
 import './Work.scss'
 
@@ -27,7 +27,7 @@ function Work() {
     setTimeout(() => {
       setAnimateCard([{y:0, opacity:1}])
 
-      if(item == 'All') {
+      if(item === 'All') {
         setFilterWork(works);
       } else {
         setFilterWork(works.filter((work) => work.tags.includes(item)))
@@ -72,6 +72,16 @@ function Work() {
                         <AiFillEye />
                       </motion.div>
                     </a>
+                    <a href={work.codeLink} target='_blank' rel='noreferrer'>
+                      <motion.div
+                      whileInView={{scale : [0,1]}}
+                        whileHover={{scale: [1,0.9]}}
+                        transition={{duration: 0.25}}
+                        className='app__flex'
+                      >
+                        <AiFillGithub />
+                      </motion.div>
+                    </a>
                 </motion.div>
               </div>
               <div className='app__work-content app__flex'>
@@ -90,4 +100,9 @@ function Work() {
   )
 }
 
-export default AppWrap(Work,'work')
+// Wrap with COPYRIGHT and bottom left button links
+export default AppWrap(
+  MotionWrap(Work,'app__works'),
+  'work',
+  "app__whitebg" // changes background color of section
+  );

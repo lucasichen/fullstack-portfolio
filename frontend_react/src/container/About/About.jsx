@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import './About.scss'
 import { urlFor, client } from '../../client';
-import { AppWrap } from '../../wrapper';
+import { AppWrap, MotionWrap } from '../../wrapper';
 
 const About = () => {
   const [abouts, setAbouts] = useState([]);
@@ -16,7 +16,7 @@ const About = () => {
   return (
     <>
       <h2 className='head-text'>
-        I Know that <span>Good Dev</span> <br /> means <span>Good Business</span>
+        Learn <span>More</span> <br /> About <span>Me</span>
         </h2>
 
         <div className='app__profiles'>
@@ -37,5 +37,9 @@ const About = () => {
     </>
   )
 }
-
-export default AppWrap(About,'about');
+// Wrap with COPYRIGHT and bottom left button links
+export default AppWrap(
+  MotionWrap(About,'app__about'),
+  'about',
+  "app__whitebg"  // changes background color of section
+  );

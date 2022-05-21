@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import ReactTooltip from 'react-tooltip'
-import { AppWrap } from '../../wrapper'
+import { AppWrap, MotionWrap } from '../../wrapper'
 import { urlFor, client } from '../../client'
 import './Skills.scss'
 
@@ -84,5 +84,9 @@ const Skills = () => {
     </>
   )
 }
-
-export default AppWrap(Skills,'skills');
+// Wrap with COPYRIGHT and bottom left button links
+export default AppWrap(
+  MotionWrap(Skills,'app__skills'),
+  'skills',
+  "app__primarybg"  // changes background color of section
+  );

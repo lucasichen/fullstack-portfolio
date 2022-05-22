@@ -3,6 +3,7 @@ import './Footer.scss'
 import { images } from '../../constants'
 import { AppWrap, MotionWrap } from '../../wrapper' 
 import { client } from '../../client'
+import ReactDOM from 'react-dom'
 
 const Footer = () => {
   const [formData, setFormData] = useState({name:'',email:'',message:''});
@@ -47,7 +48,7 @@ const Footer = () => {
       </div>
       
       {!isSubmitted ?
-      <form className='app__footer-form app__flex' data-netlify="true" method="POST" name='contact'>
+      <form className='app__footer-form app__flex'>
         <div className='app__flex'>
           <input type='text' placeholder='Name' className='p-text' name='name' value={name} onChange={handleChangeInput}/>
         </div>

@@ -3,7 +3,6 @@ import './Footer.scss'
 import { images } from '../../constants'
 import { AppWrap, MotionWrap } from '../../wrapper' 
 import { client } from '../../client'
-import ReactDOM from 'react-dom'
 
 const Footer = () => {
   const [formData, setFormData] = useState({name:'',email:'',message:''});
@@ -48,7 +47,7 @@ const Footer = () => {
       </div>
       
       {!isSubmitted ?
-      <form className='app__footer-form app__flex'>
+      <div className='app__footer-form app__flex'>
         <div className='app__flex'>
           <input type='text' placeholder='Name' className='p-text' name='name' value={name} onChange={handleChangeInput}/>
         </div>
@@ -65,7 +64,7 @@ const Footer = () => {
           />
         </div>
         <button type='submit' className='p-text' onClick={handleSubmit}>{loading ? 'Sending': 'Send'}</button>
-      </form>
+      </div>
       : <div>
           <h3 className='head-text'>Thank you for getting in touch</h3>
       </div>

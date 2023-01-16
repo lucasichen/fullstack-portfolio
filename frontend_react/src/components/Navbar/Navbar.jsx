@@ -17,7 +17,7 @@ function Navbar() {
             {['home','about','skills','projects','contact','resume'].map((item) => (
                 <li className='app__flex p-text' key={`link-${item}`}>
                     <div />
-                    {item === 'resume' ? <a href='https://drive.google.com/file/d/1aMWiGbSsSQQyrNqqGLesePYDHS9VqXcL/view?usp=sharing' target='_blank' rel='noopener noreferrer' alt='Lucas_chen_resuem'>{item}</a> : <a href={`#${item}`}>{item}</a>}
+                    {item === 'resume' ? <a href='https://drive.google.com/file/d/14mLS5dvT5Tv3uC1UIxahcjcb6-cIqUEo/view?usp=share_link' target='_blank' rel='noopener noreferrer' alt='Lucas_chen_resume'>{item}</a> : <a href={`#${item}`}>{item}</a>}
                 </li>
             ))}
         </ul>
@@ -34,7 +34,7 @@ function Navbar() {
                         <ul className='app__navbar-links'>
                             {['home','about','skills','projects','contact','resume'].map((item) => (
                             <li key={item}>
-                                {item === 'resume' ? <a href='https://drive.google.com/file/d/1aMWiGbSsSQQyrNqqGLesePYDHS9VqXcL/view?usp=sharing' target='_blank' rel='noopener noreferrer' alt='Lucas_chen_resume'>{item}</a> : <a href={`#${item}`} onClick={() => setToggle(false)}>{item}</a>}
+                                {item === 'resume' ? <a href='https://drive.google.com/file/d/14mLS5dvT5Tv3uC1UIxahcjcb6-cIqUEo/view?usp=share_link' target='_blank' rel='noopener noreferrer' alt='Lucas_chen_resume'>{item}</a> : <a href={`#${item}`} onClick={() => setToggle(false)}>{item}</a>}
                             </li>
                             ))}
                         </ul>

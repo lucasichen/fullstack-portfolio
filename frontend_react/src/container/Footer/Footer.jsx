@@ -3,6 +3,7 @@ import './Footer.scss'
 import { images } from '../../constants'
 import { AppWrap, MotionWrap } from '../../wrapper' 
 import { client } from '../../client'
+import { FaGithub,FaLinkedin } from 'react-icons/fa'
 
 const Footer = () => {
   const [formData, setFormData] = useState({name:'',email:'',message:''});
@@ -40,13 +41,13 @@ const Footer = () => {
           <img src={images.emailicon} alt='email'/>
           <a href='mailto:lucas@ichen.ca' className='p-text'>lucas@ichen.ca</a>
         </div>
-        {/* <div className='app__footer-card'>
-          <img src={images.mobile} alt='mobile'/>
-          <a href='tel:+1 (437) 241-2691' className='p-text'>+1 (437) 241-2691</a>
-        </div> */}
+        <div className='app__footer-card'>
+          <FaLinkedin id="small_icon"/>
+          <a href='https://linkedin.com/in/lucasichen' className='p-text' target='_blank'>lucasichen</a>
+        </div>
       </div>
       
-      {!isSubmitted ?
+      {/* {!isSubmitted ?
       <div className='app__footer-form app__flex'>
         <div className='app__flex'>
           <input type='text' placeholder='Name' className='p-text' name='name' value={name} onChange={handleChangeInput}/>
@@ -68,7 +69,7 @@ const Footer = () => {
       : <div>
           <h3 className='head-text'>Thank you for getting in touch</h3>
       </div>
-      }
+      } */}
     </>
   )
 }

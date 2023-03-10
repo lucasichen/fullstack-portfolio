@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "package.json",
-  "author": "Lucas Chen <lucas.chen2016@gmail.com>",
+  "author": "Lucas Chen",
   "license": "UNLICENSED",
   "scripts": {
     "start": "sanity start",
